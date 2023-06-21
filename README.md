@@ -21,19 +21,19 @@ sudo pacman -S eigen
 
 ## 进度
 
-*已经完成*  
-<font color='yellow'>*正在努力*</font>  
-<font color='gray'>*天马行空*</font>
+<div>已经完成</div>
+<div color='yellow'>正在努力</div>
+<div color='gray'>天马行空</div>
 
 + 神经网络（基本单元）
   + MLP
   + Activation Function
     + ReLU
     + Sigmoid 
-    + <font color='yellow'>Softmax</font>
+    + <div color='yellow'>Softmax</div>
   + CNN
     + Conv
     + MaxPooling
-    + <font color='yellow'>MeanPooling</font>
-  + <font color='yellow'>RNN</font>
-+ <font color='gray'>图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）</font>
+    + <div color='yellow'>MeanPooling</div>
+  + <div color='yellow'>RNN</div>
++ <div color='gray'>图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）</div>
