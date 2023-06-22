@@ -21,10 +21,6 @@ sudo pacman -S eigen
 
 ## 进度
 
-<font>已经完成</font>
-<font color='yellow'>正在努力</font>
-<font color='gray'>计划中...</font>
-
 + 神经网络（基本单元）
   + MLP
     + Activation Function
@@ -37,6 +33,6 @@ sudo pacman -S eigen
   + CNN
     + Conv
     + MaxPooling
-    + <font color='yellow'>MeanPooling</font>
-  + <font color='yellow'>RNN</font>
-+ <font color='gray'>图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）</font>
+    + > MeanPooling
+  + > RNN
++ > 图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）*  
