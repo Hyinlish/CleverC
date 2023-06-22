@@ -21,9 +21,9 @@ sudo pacman -S eigen
 
 ## 进度
 
-*<div>已经完成</div>*
-*<div color='yellow'>正在努力</div>*
-*<div color='gray'>计划中...</div>*
+<font>已经完成</font>
+<font color='yellow'>正在努力</font>
+<font color='gray'>计划中...</font>
 
 + 神经网络（基本单元）
   + MLP
@@ -33,12 +33,10 @@ sudo pacman -S eigen
       + Softmax
     + Loss Function
       + MSELoss
-      + CrossEntropyLoss 
+      + CrossEntropyLoss
   + CNN
     + Conv
     + MaxPooling
-    + <div color='yellow'>MeanPooling</div>
-  + <div color='gray'>RNN</div>
-+ 接口
-  + <div color='yellow'>图像接口（基于stb_image)</div>
-+ <div color='gray'>图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）</div>
+    + <font color='yellow'>MeanPooling</font>
+  + <font color='yellow'>RNN</font>
++ <font color='gray'>图形界面（实现一个简单的图形界面可以方便地搭建网络，包括使用已开发的单元和支持自定义单元）</font>
