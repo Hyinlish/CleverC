@@ -2,6 +2,7 @@
 #define MLP_H
 
 #include "all.h"
+#include "Tools.h"
 
 using namespace Eigen;
 
@@ -29,6 +30,7 @@ class MLP
         MatrixXd backward(MatrixXd back);
         void update(double lr);
 };
+// 激活函数=========================================================
 /**
  * ReLU激活函数
 */
@@ -46,6 +48,28 @@ class Sigmoid
     public:
         MatrixXd forward(MatrixXd inp);
         MatrixXd backward(MatrixXd back);
+};
+/**
+ * Softmax激活函数
+*/
+class Softmax
+{
+    private:
+        MatrixXd pre;
+    public:
+        MatrixXd forward(MatrixXd inp);
+        MatrixXd backward(MatrixXd back);
+};
+// 损失函数===============================================================
+class MSELoss
+{
+    public:
+        MatrixXd get_loss(MatrixXd out, double num);
+};
+class CrossEntropyLoss
+{
+    public:
+        MatrixXd get_loss(MatrixXd out, double num);
 };
 
 #endif

@@ -10,10 +10,6 @@
 using namespace Eigen;
 
 /**
- * Hadamard积
-*/
-MatrixXd hadamard(MatrixXd m1, MatrixXd m2);
-/**
  * 矩阵旋转
 */
 MatrixXd rot90(MatrixXd m);
@@ -23,5 +19,9 @@ MatrixXd rot180(MatrixXd m);
  * 暂时仅支持周围一圈填0,为卷积服务
 */
 MatrixXd pad(MatrixXd m);
+/**
+ * 一维行向量转化为对角矩阵
+*/
+MatrixXd diag(MatrixXd m);
 
 #endif

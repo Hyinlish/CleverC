@@ -3,21 +3,6 @@
 // #include <iostream>
 // using namespace std;
 
-MatrixXd hadamard(MatrixXd m1, MatrixXd m2)
-{
-    int h = m1.rows();
-    int w = m2.cols();
-    MatrixXd ret = MatrixXd::Zero(h, w);
-    for(int i=0; i<h; i++)
-    {
-        for(int j=0; j<w; j++)
-        {
-            ret(i, j) = m1(i, j) * m2(i, j);
-        }
-    }
-    return ret;
-}
-
 MatrixXd rot90(MatrixXd m)
 {
     int w = m.cols();
@@ -63,6 +48,17 @@ MatrixXd pad(MatrixXd m)
         {
             ret(i+1, j+1) = m(i, j);
         }
+    }
+    return ret;
+}
+
+MatrixXd diag(MatrixXd m)
+{
+    int w = m.cols();
+    MatrixXd ret = MatrixXd::Zero(w, w);
+    for(int i=0; i<w; i++)
+    {
+        ret(i, i) = m(i);
     }
     return ret;
 }

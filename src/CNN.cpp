@@ -16,7 +16,8 @@ MatrixXd CNN::conv(MatrixXd inp, MatrixXd thek)
     {
         for(int j=0; j<back_w; j++)
         {
-            back(i, j) = hadamard(inp.block(i,j,thek.rows(),thek.cols()), thek).sum();
+            // cwiseProduct()相当于Hadamard积
+            back(i, j) = thek.cwiseProduct(inp.block(i,j,thek.rows(),thek.cols())).sum();
         }
     }
     return back;

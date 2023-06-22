@@ -24,6 +24,7 @@ void MLP::update(double lr)
 */
 MatrixXd ReLU::forward(MatrixXd inp)
 {
+    // 可用cwiseMax优化，到时候再说
     int height = inp.rows();
     int width  = inp.cols();
     for(int i=0; i<height; i++)
@@ -77,4 +78,34 @@ MatrixXd Sigmoid::backward(MatrixXd back)
         }
     }
     return back;
+}
+/**
+ * Softmax
+*/
+MatrixXd Softmax::forward(MatrixXd inp)
+{
+    // 防止溢出
+    inp.array() -= inp.maxCoeff();
+    this->pre = inp.array().exp() / inp.array().exp().sum();
+    return this->pre;
+}
+MatrixXd Softmax::backward(MatrixXd back)
+{
+    // cout << diag(back) << endl;
+    // return diag(back) -= back.transpose() * back;
+    return this->pre - back;
+}
+/**
+ * MSELoss
+*/
+MatrixXd MSELoss::get_loss(MatrixXd out, double num)
+{
+    return -pow(out.array() -= num, 2);
+}
+/**
+ * CrossEntropyLoss
+*/
+MatrixXd CrossEntropyLoss::get_loss(MatrixXd out, double num)
+{
+    return -out.array().log10() * num;
 }
